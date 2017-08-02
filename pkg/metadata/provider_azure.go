@@ -82,7 +82,7 @@ func getUserData() ([]byte, error) {
 	return ioutil.ReadFile(azUserDataLoc)
 }
 
-// lookup a value (lookupName) in aws metaservice and store in given fileName
+// lookup a value (lookupName) in azure metaservice and store in given fileName
 func azMetaGet(lookupName string, fileName string, fileMode os.FileMode) {
 	if lookupValue, err := azGet(azMetaDataURL + lookupName); err == nil {
 		// we got a value from the metadata server, now save to filesystem
